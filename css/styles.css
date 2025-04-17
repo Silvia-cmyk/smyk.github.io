@@ -11128,7 +11128,6 @@ body {
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
   }
 }
 .projects-section .project-text {
@@ -11204,40 +11203,89 @@ body {
 
 /* 額外 CSS */
 
+/* Running Gooooo! */
 .marquee {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
-
 .marquee-content {
-    display: flex;
-    width: max-content;
-    animation: marqueeAnim 15s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: marqueeAnim 15s linear infinite;
+  animation-play-state: running;
 }
-
+.marquee:hover .marquee-content {
+  animation-play-state: paused;
+}
 .icon-track {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
 .icon-track li{
-    margin: 0 30px;
-    font-size: 1rem;
+  margin: 0 30px; /* Icon間距*/
+  font-size: 1rem;
 }
-
 .marquee-content::after {
-    content: attr(data-text);
-    display: flex;
+  /*content: attr(data-text);*/ /* 嘗試複製文字（不適用於圖示，暫時無作用） */
+  display: flex;
+}
+@keyframes marqueeAnim {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-@keyframes marqueeAnim {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+/* Collectionnnnn! */
+/* 文字與圖上下間隔拉開, 箭頭間隔 */
+.steps-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-top: 55px;
+  gap: 35px;
+}
+
+.step-card {
+  /*position: relative;*/
+  flex: 1 1 360px;
+  max-width: 500px;
+  padding: 48px 32px;
+  border-radius: 24px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.step-left {
+  transform: rotate(-3deg);
+}
+.step-right {
+  transform: rotate(3deg);
+}
+.step-card:hover{
+  transform: rotate(0deg) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+.arrow-circle{
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
 }

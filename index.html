@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#tool">工具</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">作品集</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">作品集</a></li>
                         <li class="nav-item"><a class="nav-link" href="#dashboard">能力儀表板</a></li>
                         <li class="nav-item"><a class="nav-link" href="#award">得獎與專題</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">聯絡我們</a></li>
@@ -74,6 +74,7 @@
                         <li class="list-inline-item"><i class="fas fa-database fa-4x" style="color: #0664cf;"></i></li>
                         <li class="list-inline-item"><i class="fab fa-unity fa-4x" style="color: #ffffff;"></i></li>
                         <li class="list-inline-item"><i class="fa-solid fa-cubes fa-4x" style="color: #e34c26;"></i></li>
+                        <!--跑馬燈效果 Loop Next steps: consider optimization. -->
                         <li class="list-inline-item"><i class="fab fa-html5 fa-4x" style="color: #e34c26;"></i></li>
                         <li class="list-inline-item"><i class="fab fa-css3-alt fa-4x" style="color: #264de4;"></i></li>
                         <li class="list-inline-item"><i class="fab fa-js-square fa-4x" style="color: #f7df1e;"></i></li>
@@ -91,6 +92,32 @@
                 </div>
             </div>
         </section>
+        <!-- 作品集-->
+        <section class="projects-section bg-light" id="portfolio">
+            <div class="container featured-text text-center text-lg-left px-4 px-lg-5">
+                <h2 class="mb-3">作品集</h2>
+                <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+                <!-- Featured Project Row-->
+                <div class="steps-wrapper row gx-0 mb-4 mb-lg-5 align-items-center position-relative">
+                    <!-- Left-->
+                    <div class="step-card step-left ">
+                        <img src="asset/portfolio/picheart.jpg" class="step-icon mb-3" id="img-left"/>
+                        <h5 class="fw-bold" id="title-left">Step 1: Browse by Category</h5>
+                        <p class="text-muted" id="desc-left">Choose from categories like Web Design, Interactive Media, and Branding.</p>
+                    </div>
+                    <!-- Center circle arrow -->
+                    <div class="arrow-circle d-flex align-items-center justify-content-center" id="arrow-next" style="cursor:pointer;">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <!-- Right-->
+                    <div class="step-card step-right" id="card-right">
+                        <img src="asset/portfolio/watermask.png" class="step-icon mb-3" id="img-right"/>
+                        <h5 class="fw-bold" id="title-right">Step 2: Choose a Template</h5>
+                        <p class="text-muted" id="desc-right">Each project includes insights into my creative process and techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- 頁尾-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
         <!-- Bootstrap core JS-->
@@ -102,5 +129,8 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- * * My Script ~* *-->
+        <!-- * * Step 切換功能 ~* *-->
+        <script src="js/myscript.js"></script>
     </body>
 </html>
