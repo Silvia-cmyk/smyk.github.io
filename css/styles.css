@@ -11269,6 +11269,7 @@ body {
 }
 .step-card:hover{
   transform: rotate(0deg) scale(1.03);
+  transform: scale(1.15);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -11277,7 +11278,12 @@ body {
   height: 300px;
   object-fit: contain;
   margin-bottom: 1.5rem;
+  transition: transform 0.4s ease;
 }
+.step-icon:hover{
+  transform: scale(1.5) translateY(-5px);
+}
+
 .arrow-circle{
   width: 50px;
   height: 50px;
