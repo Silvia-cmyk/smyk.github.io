@@ -45,7 +45,7 @@
             </div>
         </header>
         <!-- 工具-->
-        <section class="about-section text-center" id="tool">
+        <section class="tool-section text-center" id="tool">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
@@ -93,17 +93,17 @@
             </div>
         </section>
         <!-- 作品集-->
-        <section class="projects-section bg-light" id="portfolio">
+        <section class="portfolio-section bg-light" id="portfolio">
             <div class="container featured-text text-center text-lg-left px-4 px-lg-5">
                 <h2 class="mb-3">作品集</h2>
                 <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
-                <!-- Featured Project Row-->
+                <!-- Featured portfolio-->
                 <div class="steps-wrapper row gx-0 mb-4 mb-lg-5 align-items-center position-relative">
                     <!-- Left-->
                     <div class="step-card step-left ">
                         <img src="asset/portfolio/picheart.jpg" class="step-icon mb-3" id="img-left"/>
-                        <h5 class="fw-bold" id="title-left">Step 1: Browse by Category</h5>
-                        <p class="text-muted" id="desc-left">Choose from categories like Web Design, Interactive Media, and Branding.</p>
+                        <h5 class="fw-bold" id="title-left">左</h5>
+                        <p class="text-muted" id="desc-left">左</p>
                     </div>
                     <!-- Center circle arrow -->
                     <div class="arrow-circle d-flex align-items-center justify-content-center" id="arrow-next" style="cursor:pointer;">
@@ -112,8 +112,38 @@
                     <!-- Right-->
                     <div class="step-card step-right" id="card-right">
                         <img src="asset/portfolio/watermask.png" class="step-icon mb-3" id="img-right"/>
-                        <h5 class="fw-bold" id="title-right">Step 2: Choose a Template</h5>
-                        <p class="text-muted" id="desc-right">Each project includes insights into my creative process and techniques.</p>
+                        <h5 class="fw-bold" id="title-right">右</h5>
+                        <p class="text-muted" id="desc-right">右</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 能力儀表板-->
+        <section class="ability-section bg-light" id="dashboard">
+            <div class="container text-center py-5">
+                <h2 class="mb-2">個人能力儀表板</h2>
+                <p class="text-muted mb-4">A reflection of my technical abilities and design prowess.</p>
+                <!-- 按鈕聚集處 -->
+                <div class="toggle-group mb-5">
+                    <button class="toggle-btn active" data-type="university">
+                        <span class="check-icon">✔️</span>
+                        <span>大學</span>
+                    </button>
+                    <button class="toggle-btn" data-type="work">
+                        <span class="check-icon"></span>
+                        <span>工作</span>
+                    </button>
+                </div>
+                <!-- 儀表板區 -->
+                <div class="chart-wrapper">
+                    <!-- 左 -->
+                    <div class="bar-chart-container">
+                        <!-- 進度條 -->
+                        <div id="bar-chart"></div>
+                    </div>
+                    <!-- 右 -->
+                    <div class="radar-chart-container">
+                        <canvas id="radar-chart" width="300" height="300"></canvas>
                     </div>
                 </div>
             </div>
@@ -129,8 +159,12 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- * * 🕸️Chart.js  ~* *-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <!-- * * My Script ~* *-->
         <!-- * * Step 切換功能 ~* *-->
         <script src="js/myscript.js"></script>
+        <!-- * * （先分開兩個）Step Dashboard區塊 ~* *-->
+        <script src="js/myscript2.js"></script>
     </body>
 </html>

@@ -58,10 +58,14 @@ const data = [
 ]
 
 const updateCard = (dataItem, imgId, titleId, descId) => {
+    // 更新圖片與標題
     document.getElementById(imgId).src = dataItem.img;
     document.getElementById(titleId).innerText = dataItem.title;
 
     const descElement = document.getElementById(descId);
+    // 更新描述
+    // 如果有連結，則顯示連結
+    // 否則只顯示描述
     if (dataItem.link) {
         descElement.innerHTML = `${dataItem.desc}<br><a href="${dataItem.link}" target="_blank" class="project-link">查看程式碼</a>`;
     }else{
@@ -75,22 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // initial load
     updateCard(data[0], "img-left", "title-left", "desc-left");
     updateCard(data[1], "img-right", "title-right", "desc-right");
+    
     // switch to the next card
     const arrow = document.getElementById("arrow-next");
-
     arrow.addEventListener("click", () => {
         currentIndex = (currentIndex + 1) % data.length;
         const nextIndex = (currentIndex + 1) % data.length;
-        //
-        //document.getElementById("img-left").src = data[currentIndex].img;
-        //document.getElementById("title-left").innerText = data[currentIndex].title;
-        //document.getElementById("desc-left").innerText = data[currentIndex].desc;
         updateCard(data[currentIndex], "img-left", "title-left", "desc-left");
-        //
-        
-        //document.getElementById("img-right").src = data[nextIndex].img;
-        //document.getElementById("title-right").innerText = data[nextIndex].title;
-        //document.getElementById("desc-right").innerText = data[nextIndex].desc;
         updateCard(data[nextIndex], "img-right", "title-right", "desc-right");
     });
 });
