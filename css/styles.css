@@ -11463,3 +11463,22 @@ body {
   margin-bottom: 1rem;
   text-align: justify; /* 左右對齊 */
 }
+/* 等待 */
+#experience-loading{
+  text-align: center;
+  padding: 3rem 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.emoji{
+  font-size: 2rem;
+  animation: bounce 1.2s infinite;
+}
+.text{
+  font-weight: bold;
+  color: #666;
+  margin-top: 1rem;
+}
+@keyframes bounce{
+  0%, 100% {transform: translateY(0px);}
+  50% {transform: translateY(-8px);}
+}

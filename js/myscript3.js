@@ -18,6 +18,8 @@ function initMasonry(){
         card.style.minHeight = 'unset';
     });
 
+    let placedCount = 0; // Picture Count
+
     // Process each card
     cards.forEach(card => {
         const img = card.querySelector('img');
@@ -32,6 +34,13 @@ function initMasonry(){
             // 撐高
             const containerHeight = Math.max(...heights);
             photosContainer.style.height = containerHeight + 'px';
+
+            // 全部放完Icon收手
+            placedCount++;
+            if (placedCount === cards.length){
+                document.getElementById('experience-loading').style.display = 'none';
+                photosContainer.style.visibility = 'visible';
+            }
         }
         
         if (!img){
@@ -47,6 +56,9 @@ function initMasonry(){
 }
 
 window.onload = function() {
+    // 🟡載入時顯示 loading 動畫
+    photosContainer.style.visibility = 'hidden';
+    document.getElementById('experience-loading').style.display = 'block';
     initMasonry();
 };
 
