@@ -11381,3 +11381,63 @@ body {
   color: #333;
   font-family: 'Courier New', monospace;
 }
+/* ============================== */
+/* Experience Carddddd Control! */
+/* ============================== */
+/* 更.改成# 接下來我發現很多position都改成relative*/
+#experience-grid{
+  position: relative;
+  width: 100%;
+}
+
+.experience-card{
+  position: absolute;
+  width: 300px;
+  cursor: pointer;
+  height: auto;
+  min-height: 450px;
+  display: inline-block; /* ⭐⭐ 這句是關鍵，讓卡片抓到內部高度！ */
+}
+
+.card-inner{
+  height: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  display: block;
+}
+
+.card-front, .card-back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-front{
+  z-index: 2;
+}
+
+.experience-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-back{
+  transform: rotateY(180deg);
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+.experience-card:hover .card-inner{
+  transform: rotateY(180deg);
+}
+
+.projects-section{
+  overflow: hidden;
+  padding-bottom: 20 rem;
+}
