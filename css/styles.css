@@ -11402,19 +11402,20 @@ body {
 .card-inner{
   height: auto;
   transform-style: preserve-3d;
-  transition: transform 0.8s;
+  transition: transform 0.5s ease-in-out;
   display: block;
 }
 
-.card-front, .card-back{
+.experience-card .card-front,
+.experience-card .card-back{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   backface-visibility: hidden;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card-front{
@@ -11433,11 +11434,33 @@ body {
   padding: 1rem;
 }
 
-.experience-card:hover .card-inner{
+.experience-card:active .card-inner{
   transform: rotateY(180deg);
+}
+@media (hover: hover) and (pointer: fine){
+  .experience-card:hover .card-inner{
+    transform: rotateY(180deg);
+  }
+}
+.experience-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3ss ease, box-shadow 0.3s ease;
+  z-index: 10;
 }
 
 .projects-section{
   overflow: hidden;
   padding-bottom: 20 rem;
+}
+.card-front h5{
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.card-back p{
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify; /* 左右對齊 */
 }
