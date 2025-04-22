@@ -11224,7 +11224,7 @@ body {
   padding: 0;
   margin: 0;
 }
-.icon-track li{
+.icon-track li {
   margin: 0 30px; /* Icon間距*/
   font-size: 1rem;
 }
@@ -11266,23 +11266,23 @@ body {
 .step-right {
   transform: rotate(3deg);
 }
-.step-card:hover{
+.step-card:hover {
   transform: rotate(0deg) scale(1.03);
   transform: scale(1.15);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 /* card內圖片設定 */
-.step-icon{
+.step-icon {
   width: 300px;
   height: 300px;
   object-fit: contain;
   margin-bottom: 1.5rem;
   transition: transform 0.4s ease;
 }
-.step-icon:hover{
+.step-icon:hover {
   transform: scale(1.5) translateY(-5px);
 }
-.arrow-circle{
+.arrow-circle {
   width: 50px;
   height: 50px;
   border: 2px solid #ddd;
@@ -11297,14 +11297,14 @@ body {
 /* Dashboarddddddd! */
 /* ============================== */
 /* 按鈕區塊 */
-.toggle-group{
+.toggle-group {
   display: inline-flex;
   border: 1px solid #888;
   border-radius: 999px;
   overflow: hidden;
   font-size: 16px;
 }
-.toggle-btn{
+.toggle-btn {
   flex: 1;
   padding: 8px 20px;
   background-color: #fff;
@@ -11320,17 +11320,17 @@ body {
   border-right: 1px solid #888;
 }
 /* 最後一顆btn不要右邊框 */
-.toggle-btn:last-child{
+.toggle-btn:last-child {
   border-right: none;
 }
 /* 按鈕激活樣式 */
-.toggle-btn.active{
+.toggle-btn.active {
   background-color: #e7dcf7;
   color: #000;
   font-weight: 600;
 }
 /* 圖表區塊（含雷達與長條圖） */
-.chart-wrapper{
+.chart-wrapper {
   display: flex;
   justify-content: center;
   align-items: flex-start; /*  保持上邊緣對齊 */
@@ -11338,21 +11338,21 @@ body {
   flex-wrap: wrap;
   margin-top: 40px;
 }
-.bar-chart-container, .radar-chart-container{
+.bar-chart-container, .radar-chart-container {
   width: 100%;
   max-width: 400px;
 }
 /* 長條狀圖（橫） */
-.bar-row{
+.bar-row {
   margin-bottom: 16px;
 }
-.bar-label{
+.bar-label {
   font-size: 16px;
   margin-bottom: 4px;
   text-align: left;
 }
 /* 外層 */
-.bar-track{
+.bar-track {
   height: 20px;
   width: 100%;
   background-color: #eee;
@@ -11363,7 +11363,7 @@ body {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 /* 內層 */
-.bar-fill{
+.bar-fill {
   height: 100%;
   width: 0%;
   transition: width 1.2s ease-in-out;
@@ -11371,7 +11371,7 @@ body {
   box-shadow: inset 5 0 5px rgba(0, 0, 0, 0.2);
   animation: animateBar 1.2s ease-in-out forwards; /* 漸層搭配JS bar fill.style.background  */
 }
-.bar-percent{
+.bar-percent {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -11384,30 +11384,29 @@ body {
 /* ============================== */
 /* Experience Carddddd Control! */
 /* ============================== */
-/* 更.改成# 接下來我發現很多position都改成relative*/
+.projects-section{
+  overflow: hidden;
+  padding-bottom: 5rem;
+}
 #experience-grid{
-  position: relative;
+  position: relative; /* 🧠 子卡片需用 absolute 定位 → 父層需 relative 定錨 */
   width: 100%;
 }
-
 .experience-card{
   position: absolute;
   width: 300px;
   cursor: pointer;
   height: auto;
   min-height: 450px;
-  display: inline-block; /* ⭐⭐ 這句是關鍵，讓卡片抓到內部高度！ */
+  display: inline-block; /* ⭐⭐ 讓卡片抓到內部高度！ */
 }
-
 .card-inner{
   width: 100%;
   height: 100%;
-  perspective: 1000px;
   transform-style: preserve-3d;
   transition: transform 0.5s ease-in-out;
   display: block;
 }
-
 .experience-card .card-front,
 .experience-card .card-back{
   position: absolute;
@@ -11419,43 +11418,35 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 .card-front{
   z-index: 2;
 }
-
 .experience-img{
   width: 100%;
   height: auto;
   display: block;
 }
-
 .card-back{
   transform: rotateY(180deg);
   background-color: #f8f9fa;
   padding: 1rem;
 }
-
 .experience-card:hover .card-inner,
 .experience-card:focus .card-inner{
   transform: rotateY(180deg);
 }
-
 .experience-card:hover {
-  transform: translateY(-5px);
-  transition: transform 0.3ss ease, box-shadow 0.3s ease;
+  transform: translateY(-5px); /* 🆙 漂浮 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 10;
 }
-
-.projects-section{
-  overflow: hidden;
-  padding-bottom: 20 rem;
-}
+/* Text Detail Control*/
 .card-front h5{
   padding: 0 1rem;
   text-align: center;
   font-size: 1rem;
   line-height: 1.4;
+  margin: 1rem;
 }
 .card-back p{
   font-size: 0.95rem;
@@ -11463,7 +11454,7 @@ body {
   margin-bottom: 1rem;
   text-align: justify; /* 左右對齊 */
 }
-/* 等待 */
+/* Loading */
 #experience-loading{
   text-align: center;
   padding: 3rem 1rem;
