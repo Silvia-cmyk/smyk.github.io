@@ -1,17 +1,6 @@
 const gap = 20;
 const photosContainer = document.getElementById('experience-grid');
 const cards = document.querySelectorAll('.experience-card');
-const allCards = document.querySelectorAll('.experience-card');
-const isMobile = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
-
-allCards.forEach((card) => {
-    if (isMobile) {
-        // 手機點擊
-        card.addEventListener('click', () => {
-            card.classList.toggle('active');
-        });
-    }
-});
 
 // 大便塔💩🏗️處理
 function waitForCardReady(callback){
@@ -90,6 +79,14 @@ function arrangeMasonry(){
 window.onload = function(){
     waitForCardReady(() => {
         arrangeMasonry();
+    });
+    
+    document.querySelectorAll('.experience-card').forEach(card => {
+        card.addEventListener('click', () => {
+            if (window.innerWidth <= 768){
+                card.classList.toggle('flipped');
+            }
+        });
     });
 };
 let resizeTimer;

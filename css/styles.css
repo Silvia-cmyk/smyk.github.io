@@ -11400,7 +11400,9 @@ body {
 }
 
 .card-inner{
-  height: auto;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
   transform-style: preserve-3d;
   transition: transform 0.5s ease-in-out;
   display: block;
@@ -11434,14 +11436,11 @@ body {
   padding: 1rem;
 }
 
-.experience-card:active .card-inner{
+.experience-card:hover .card-inner,
+.experience-card.flipped .card-inner{
   transform: rotateY(180deg);
 }
-@media (hover: hover) and (pointer: fine){
-  .experience-card:hover .card-inner{
-    transform: rotateY(180deg);
-  }
-}
+
 .experience-card:hover {
   transform: translateY(-5px);
   transition: transform 0.3ss ease, box-shadow 0.3s ease;
