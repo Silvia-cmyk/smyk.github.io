@@ -11437,7 +11437,7 @@ body {
 }
 
 .experience-card:hover .card-inner,
-.experience-card.flipped .card-inner{
+.experience-card:focus .card-inner{
   transform: rotateY(180deg);
 }
 

@@ -80,14 +80,6 @@ window.onload = function(){
     waitForCardReady(() => {
         arrangeMasonry();
     });
-    
-    document.querySelectorAll('.experience-card').forEach(card => {
-        card.addEventListener('click', () => {
-            if (window.innerWidth <= 768){
-                card.classList.toggle('flipped');
-            }
-        });
-    });
 };
 let resizeTimer;
 window.onresize = function(){
