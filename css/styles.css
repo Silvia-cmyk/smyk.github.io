@@ -11200,10 +11200,11 @@ body {
 .footer {
   padding: 5rem 0;
 }
-
+/* ============================== */
 /* 額外 CSS */
-
+/* ============================== */
 /* Running Gooooo! */
+/* ============================== */
 .marquee {
   width: 100%;
   overflow: hidden;
@@ -11225,11 +11226,11 @@ body {
   margin: 0;
 }
 .icon-track li {
-  margin: 0 30px; /* Icon間距*/
+  margin: 0 30px; /* Icon spacing */
   font-size: 1rem;
 }
 .marquee-content::after {
-  /*content: attr(data-text);*/ /* 嘗試複製文字（不適用於圖示，暫時無作用） */
+  /*content: attr(data-text);*/ /* Attempt to copy text (does not work for icons, currently non-functional) */  
   display: flex;
 }
 @keyframes marqueeAnim {
@@ -11240,9 +11241,10 @@ body {
     transform: translateX(-50%);
   }
 }
-
+/* ============================== */
 /* Collectionnnnn! */
-/* 文字與圖上下間隔拉開, 箭頭間隔 */
+/* ============================== */
+/* Increase spacing between text and icons, adjust arrow➡️ gaps */  
 .steps-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -11251,7 +11253,7 @@ body {
   margin-top: 55px;
   gap: 35px;
 }
-/* 單張card的框架設定 */
+/* Frame settings for a single card */ 
 .step-card {
   flex: 1 1 360px;
   max-width: 500px;
@@ -11271,7 +11273,7 @@ body {
   transform: scale(1.15);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
-/* card內圖片設定 */
+/* Image settings inside the card */
 .step-icon {
   width: 300px;
   height: 300px;
@@ -11296,7 +11298,7 @@ body {
 /* ============================== */
 /* Dashboarddddddd! */
 /* ============================== */
-/* 按鈕區塊 */
+/* Button block */
 .toggle-group {
   display: inline-flex;
   border: 1px solid #888;
@@ -11319,22 +11321,22 @@ body {
   gap: 8px;
   border-right: 1px solid #888;
 }
-/* 最後一顆btn不要右邊框 */
+/* Remove right border from the last button */
 .toggle-btn:last-child {
   border-right: none;
 }
-/* 按鈕激活樣式 */
+/* Active button style */
 .toggle-btn.active {
   background-color: #e7dcf7;
   color: #000;
   font-weight: 600;
 }
-/* 圖表區塊（含雷達與長條圖） */
+/* Chart block (includes radar and bar charts) */
 .chart-wrapper {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /*  保持上邊緣對齊 */
-  gap: 120px;               /*  控制兩區塊之間的間距 */
+  align-items: flex-start;   /* Keep top edge aligned */
+  gap: 120px;                /* Control spacing between two blocks */
   flex-wrap: wrap;
   margin-top: 40px;
 }
@@ -11342,7 +11344,7 @@ body {
   width: 100%;
   max-width: 400px;
 }
-/* 長條狀圖（橫） */
+/* Bar chart (horizontal) */
 .bar-row {
   margin-bottom: 16px;
 }
@@ -11351,25 +11353,25 @@ body {
   margin-bottom: 4px;
   text-align: left;
 }
-/* 外層 */
+/* Outer layer */
 .bar-track {
   height: 20px;
   width: 100%;
   background-color: #eee;
-  border: 1.5px solid #ccc; /*999*/
+  border: 1.5px solid #ccc;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-/* 內層 */
+/* Inner layer */
 .bar-fill {
   height: 100%;
   width: 0%;
   transition: width 1.2s ease-in-out;
-  border-radius: 4px; /* 內圓角 */
+  border-radius: 4px;
   box-shadow: inset 5 0 5px rgba(0, 0, 0, 0.2);
-  animation: animateBar 1.2s ease-in-out forwards; /* 漸層搭配JS bar fill.style.background  */
+  animation: animateBar 1.2s ease-in-out forwards;   /* Gradient matching JS bar fill.style.background */
 }
 .bar-percent {
   position: absolute;
@@ -11388,8 +11390,10 @@ body {
   overflow: hidden;
   padding-bottom: 5rem;
 }
+/* 🧠 Child cards need absolute positioning → 
+Parent container needs relative positioning as container */
 #experience-grid{
-  position: relative; /* 🧠 子卡片需用 absolute 定位 → 父層需 relative 定錨 */
+  position: relative;
   width: 100%;
 }
 .experience-card{
@@ -11398,7 +11402,7 @@ body {
   cursor: pointer;
   height: auto;
   min-height: 450px;
-  display: inline-block; /* ⭐⭐ 讓卡片抓到內部高度！ */
+  display: inline-block;   /* ⭐⭐ Make the card detect internal height! */
 }
 .card-inner{
   width: 100%;
@@ -11436,7 +11440,7 @@ body {
   transform: rotateY(180deg);
 }
 .experience-card:hover {
-  transform: translateY(-5px); /* 🆙 漂浮 */
+  transform: translateY(-5px); /* 🆙 Floating effect */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 10;
 }
@@ -11452,7 +11456,7 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  text-align: justify; /* 左右對齊 */
+  text-align: justify; /* Horizontal alignment */
 }
 /* Loading */
 #experience-loading{

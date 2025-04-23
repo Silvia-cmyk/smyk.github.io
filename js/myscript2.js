@@ -42,9 +42,9 @@ document.querySelectorAll(".toggle-btn").forEach(btn => {
         // set up active state and show icon.
         btn.classList.add("active");
         btn.querySelector(".check-icon").textContent = "✔️";
-        // 📌 取得 data-type
+        // 📌 Get data-type
         const type = btn.dataset.type;
-        // ⏬ 呼叫圖表繪製函式
+        // ⏬ Call chart rendering function
         renderBarChart(type);
         renderRadarChart(type);
     });
@@ -78,7 +78,8 @@ function renderBarChart(type){
         setTimeout(() => {
             const fill = row.querySelector(".bar-fill");
             const percent = row.querySelector(".bar-percent");
-            fill.style.backgroundColor = item.color; // ⬅️套用顏色
+            fill.style.backgroundColor = item.color; // 🎨 Apply colors
+
             fill.style.background = `linear-gradient(to right, #fff 0%, ${item.color} 100%)`;
             fill.style.width = `${item.value}%`;
 

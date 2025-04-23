@@ -6,14 +6,14 @@
         <meta name="description" content="Skip final write" />
         <meta name="author" content="cmyk" />
         <title> FINAL </title>
-        <!-- ICON BROWSER -->
+        <!-- Styles for the icon browser component -->
         <link rel="icon" type="image/x-icon" href="asset/organizing-thoughts.svg" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <!-- Navigation 導航列-->
+        <!-- Navigation Bar-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">R O U 's Portfolio</a>
@@ -23,29 +23,29 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#tool">工具</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">作品集</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#stack">工具</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">技術實踐記錄</a></li>
                         <li class="nav-item"><a class="nav-link" href="#dashboard">能力儀表板</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#award">得獎與專題</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#award">經歷與成長</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">聯絡我們</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Masthead 首頁-->
+        <!-- Homepage Masthead -->
         <header class="masthead">
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">相信自己</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">90%堅定不放棄的心+10%努力，只要我想做，我就可以做出來我想要的樣子出來</h2>
-                        <a class="btn btn-primary" href="#tool">View Portfolio</a>
+                        <a class="btn btn-primary" href="#stack">View Portfolio</a>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- 工具-->
-        <section class="tool-section text-center" id="tool">
+        <!-- Technical Stack -->
+        <section class="tool-section text-center" id="stack">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <!--跑馬燈效果-->
+            <!-- Marquee (Scrolling icon animation) -->
             <div class="marquee">
                 <div class="marquee-content">
                     <ul class="icon-track">
@@ -74,7 +74,7 @@
                         <li class="list-inline-item"><i class="fas fa-database fa-4x" style="color: #0664cf;"></i></li>
                         <li class="list-inline-item"><i class="fab fa-unity fa-4x" style="color: #ffffff;"></i></li>
                         <li class="list-inline-item"><i class="fa-solid fa-cubes fa-4x" style="color: #e34c26;"></i></li>
-                        <!--跑馬燈效果 Loop Next steps: consider optimization. -->
+                        <!-- Loop Next steps: consider optimization. -->
                         <li class="list-inline-item"><i class="fab fa-html5 fa-4x" style="color: #e34c26;"></i></li>
                         <li class="list-inline-item"><i class="fab fa-css3-alt fa-4x" style="color: #264de4;"></i></li>
                         <li class="list-inline-item"><i class="fab fa-js-square fa-4x" style="color: #f7df1e;"></i></li>
@@ -92,12 +92,12 @@
                 </div>
             </div>
         </section>
-        <!-- 作品集-->
+        <!-- Technical Demonstrations -->
         <section class="portfolio-section bg-light" id="portfolio">
             <div class="container featured-text text-center text-lg-left px-4 px-lg-5">
-                <h2 class="mb-3">作品集</h2>
+                <h2 class="mb-3">技術實踐記錄</h2>
                 <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
-                <!-- Featured portfolio-->
+                <!-- Demonstrations Wrapper Frame -->  
                 <div class="steps-wrapper row gx-0 mb-4 mb-lg-5 align-items-center position-relative">
                     <!-- Left-->
                     <div class="step-card step-left ">
@@ -118,12 +118,12 @@
                 </div>
             </div>
         </section>
-        <!-- 能力儀表板-->
+        <!-- Personal Skills Progress Dashboard -->
         <section class="ability-section bg-light" id="dashboard">
             <div class="container text-center py-5">
                 <h2 class="mb-2">個人能力儀表板</h2>
                 <p class="text-muted mb-4">A reflection of my technical abilities and design prowess.</p>
-                <!-- 按鈕聚集處 -->
+                <!-- Control Panel Region -->
                 <div class="toggle-group mb-5">
                     <button class="toggle-btn active" data-type="university">
                         <span class="check-icon">✔️</span>
@@ -134,28 +134,28 @@
                         <span>工作</span>
                     </button>
                 </div>
-                <!-- 儀表板區 -->
+                <!-- Dashboard Section Wrapper Frame -->
                 <div class="chart-wrapper">
-                    <!-- 左 -->
+                    <!-- Left -->
                     <div class="bar-chart-container">
-                        <!-- 進度條 -->
+                        <!-- Progress Bars -->
                         <div id="bar-chart"></div>
                     </div>
-                    <!-- 右 -->
+                    <!-- Right -->
                     <div class="radar-chart-container">
                         <canvas id="radar-chart" width="300" height="300"></canvas>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- 經歷區域 -->
+        <!-- Experience & Growth Section -->
         <section class="projects-section bg-light" id="award">
             <div class="container px-4 px-lg-5">
                 <div class="experience-wrapper text-center">
                     <h2 class="section-title">經歷與成長</h2>
                     <p class="text-muted">Explore my certifications, achievements, and personal learning journeys.</p>
                 </div>
-                <!-- Card Container 經歷區 💡 字數建議：每段文字 60～100 字;總字數 180～300 字（大約 3 段）-->
+                <!-- 💡 Copy guidelines: 60-100 chars per paragraph; 180-300 chars total (3 paragraphs) -->
                 <div id="experience-loading">
                     <div class="emoji">🧱🧱🧱</div>
                     <div class="text">我正在努力堆疊中...</div>
@@ -322,11 +322,11 @@
         <!-- * * 🕸️Chart.js  ~* *-->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <!-- * * My Script ~* *-->
-        <!-- * * Step 切換功能 ~* *-->
+        <!-- * * Step Technical Demonstrations btn Grid ~* *-->
         <script src="js/myscript.js"></script>
-        <!-- * * （先分開兩個）Step Dashboard區塊 ~* *-->
+        <!-- * * Step Dashboard Grid ~* *-->
         <script src="js/myscript2.js"></script>
-        <!-- * * 經歷瀑布流區塊 ~* *-->
+        <!-- * * Waterfall Experience Grid ~* *-->
         <script src="js/myscript3.js"></script>
     </body>
 </html>

@@ -58,14 +58,14 @@ const data = [
 ]
 
 const updateCard = (dataItem, imgId, titleId, descId) => {
-    // 更新圖片與標題
+    // Update image and title
     document.getElementById(imgId).src = dataItem.img;
     document.getElementById(titleId).innerText = dataItem.title;
 
     const descElement = document.getElementById(descId);
-    // 更新描述
-    // 如果有連結，則顯示連結
-    // 否則只顯示描述
+
+    
+    // Update description (show link if available, otherwise display description only)
     if (dataItem.link) {
         descElement.innerHTML = `${dataItem.desc}<br><a href="${dataItem.link}" target="_blank" class="project-link">查看程式碼</a>`;
     }else{
