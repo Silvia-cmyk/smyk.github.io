@@ -11069,7 +11069,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/IMG_1899.PNG");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11198,7 +11198,10 @@ body {
 }
 
 .footer {
+  background-color: #111;
+  color: #eee;
   padding: 5rem 0;
+  text-align: center;
 }
 /* ============================== */
 /* 額外 CSS */
@@ -11386,17 +11389,17 @@ body {
 /* ============================== */
 /* Experience Carddddd Control! */
 /* ============================== */
-.projects-section{
+.projects-section {
   overflow: hidden;
   padding-bottom: 5rem;
 }
 /* 🧠 Child cards need absolute positioning → 
 Parent container needs relative positioning as container */
-#experience-grid{
+#experience-grid {
   position: relative;
   width: 100%;
 }
-.experience-card{
+.experience-card {
   position: absolute;
   width: 300px;
   cursor: pointer;
@@ -11404,7 +11407,7 @@ Parent container needs relative positioning as container */
   min-height: 450px;
   display: inline-block;   /* ⭐⭐ Make the card detect internal height! */
 }
-.card-inner{
+.card-inner {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
@@ -11412,7 +11415,7 @@ Parent container needs relative positioning as container */
   display: block;
 }
 .experience-card .card-front,
-.experience-card .card-back{
+.experience-card .card-back {
   position: absolute;
   top: 0;
   left: 0;
@@ -11422,21 +11425,21 @@ Parent container needs relative positioning as container */
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.card-front{
+.card-front {
   z-index: 2;
 }
-.experience-img{
+.experience-img {
   width: 100%;
   height: auto;
   display: block;
 }
-.card-back{
+.card-back {
   transform: rotateY(180deg);
   background-color: #f8f9fa;
   padding: 1rem;
 }
 .experience-card:hover .card-inner,
-.experience-card:focus .card-inner{
+.experience-card:focus .card-inner {
   transform: rotateY(180deg);
 }
 .experience-card:hover {
@@ -11445,35 +11448,114 @@ Parent container needs relative positioning as container */
   z-index: 10;
 }
 /* Text Detail Control*/
-.card-front h5{
+.card-front h5 {
   padding: 0 1rem;
   text-align: center;
   font-size: 1rem;
   line-height: 1.4;
   margin: 1rem;
 }
-.card-back p{
+.card-back p {
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1rem;
   text-align: justify; /* Horizontal alignment */
 }
 /* Loading */
-#experience-loading{
+#experience-loading {
   text-align: center;
   padding: 3rem 1rem;
   animation: fadeIn 0.5s ease-in-out;
 }
-.emoji{
+.emoji {
   font-size: 2rem;
   animation: bounce 1.2s infinite;
 }
-.text{
+.text {
   font-weight: bold;
   color: #666;
   margin-top: 1rem;
 }
-@keyframes bounce{
+@keyframes bounce {
   0%, 100% {transform: translateY(0px);}
   50% {transform: translateY(-8px);}
 }
+/* ============================== */
+/* 💬 Quotation! Keep in mind */
+/* ============================== */
+.quote-icon {
+  font-size: 4rem;
+  color: #000;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 4s ease-out forwards 0.3s;
+}
+.quotation {
+  line-height: 1.8;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 4s ease-out forwards 0.6s;
+}
+.quote-footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+.quote_container:hover .quote-icon {
+  transform: rotate(-5deg) scale(1.2);
+}
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ============================== */
+/* 💬 FAQ! */
+/* ============================== */
+.accordion-button {
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #f8f9fa;
+  color: #000;
+  box-shadow: none;
+}
+/* ============================== */
+/* 😊 Contact! */
+/* ============================== */
+.contact-btn {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  min-width: 160px;
+}
+/* .contact-btn.copied {
+  background-color: #28a745 !important;
+  color: white;
+  transform: scale(1.05);
+} */
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
