@@ -11163,7 +11163,7 @@ body {
 }
 
 .contact-section {
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 .contact-section .card {
   border: 0;
@@ -11182,7 +11182,7 @@ body {
   width: 3rem;
 }
 .contact-section .social {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 .contact-section .social a {
   text-align: center;
@@ -11204,6 +11204,9 @@ body {
   background-color: #111;
   color: #eee;
   text-align: center;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
 }
 /* ============================== */
 /* 額外 CSS */
@@ -11585,7 +11588,7 @@ Parent container needs relative positioning as container */
 .cta-btn:active {
   background-color: #FE7743 !important;
 }
-/* test */
+/* Navigation style adjustments */
 .navbar {
   background-color: transparent;
   transition: background-color 0.4s ease, box-shadow 0.3s ease;
@@ -11609,4 +11612,46 @@ Parent container needs relative positioning as container */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+/* Snow in footer */
+.snowflake {
+  position: absolute;
+  top: -15px;
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  pointer-events: none;
+  user-select: none;
+  animation: fall-sway 11.5s linear forwards;
+}
+@keyframes fall-sway {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateX(15px) translateY(150px) rotate(90deg);
+  }
+  50% {
+    transform: translateX(-15px) translateY(300px) rotate(180deg);
+  }
+  75% {
+    transform: translateX(15px) translateY(450px) rotate(270deg);
+  }
+  100% {
+    transform: translateX(-15px) translateY(520px) rotate(360deg);
+    opacity: 1;
+  }
+}
 
+/* Falling straight down.
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  90% {
+    transform: translateY(500px) rotate(360deg);
+  }
+  100% {
+    transform: translateY(520px) rotate(720deg);
+    opacity: 0;
+  }
+} */
