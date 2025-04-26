@@ -11262,10 +11262,14 @@ body {
 .step-card {
   flex: 1 1 360px;
   max-width: 500px;
+  height: 560px;
   padding: 48px 32px;
   border-radius: 24px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.step-text {
+  text-align: justify;
 }
 .step-left {
   transform: rotate(-3deg);
@@ -11274,9 +11278,8 @@ body {
   transform: rotate(3deg);
 }
 .step-card:hover {
-  transform: rotate(0deg) scale(1.03);
   transform: scale(1.15);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 /* Image settings inside the card */
 .step-icon {

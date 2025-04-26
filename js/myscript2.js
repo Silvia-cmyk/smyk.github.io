@@ -1,32 +1,35 @@
 const barchartData = {
     university: {
         bars:[
-            {label: "Python", value: 80, color: "#d7b4f3"},
-            {label: "Java", value: 70, color: "#f7c59f"},
-            {label: "C++", value: 60, color: "#9fe3e1"},
-            {label: "JavaScript", value: 90, color: "#f7e65b"},
-            {label: "C#", value: 50, color: "#b4c6f0"},
+            {label: "Python", value: 85, color: "#c9b6f3"},
+            {label: "Linux", value: 85, color: "#f5b971"},
+            {label: "C Language", value: 75, color: "#7ed6d2"},
+            {label: "Unity", value: 88, color: "#ffe066"},
+            {label: "Blender", value: 80, color: "#92b4f4"},
+            {label: "Database/SQL", value: 75, color: "#8ecae6"},
         ]
     },
     work: {
         bars:[
-            {label: "Python", value: 85, color: "#d7b4f3"},
-            {label: "Java", value: 75, color: "#f7c59f"},
-            {label: "C++", value: 65, color: "#9fe3e1"},
-            {label: "JavaScript", value: 95, color: "#f7e65b"},
-            {label: "C#", value: 55, color: "#b4c6f0"},
+            {label: "Python", value: 80, color: "#6EC1E4"},
+            {label: "Linux", value: 80, color: "#4A6D8C"},
+            {label: "Docker", value: 85, color: "#5AB1BB"},
+            {label: "Power BI", value: 85, color: "#F6C90E"},
+            {label: "Grafana", value: 80, color: "#F79256"},
+            {label: "MySQL", value: 80, color: "#9BA8B5"},
+            {label: "Notion", value: 95, color: "#B28DFF"},
         ]
     }
 };
 
 const radarData = {
     university: {
-        labels: ["Data 1", "Data 2", "Data 3", "Data 4", "Data 5", "Data 6"],
-        data: [60, 50, 80, 90, 70, 65]
+        labels: ["自主學習", "問題解決", "技術整合", "執行力", "抗壓性與耐心", "團隊合作"],
+        data: [90, 85, 75, 70, 65, 73]
     },
     work: {
-        labels: ["Python", "Java", "C++", "JavaScript", "C#", "Data 6"],
-        data: [85, 75, 65, 95, 55, 85]
+        labels: ["技術整合", "自主學習", "問題解決", "抗壓性與自我堅持", "表達能力", "系統思考"],
+        data: [95, 90, 85, 90, 75, 80]
     }
 };
 
