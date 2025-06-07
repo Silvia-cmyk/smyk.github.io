@@ -60,6 +60,18 @@ const data = [
         title: "鯊鯊居家防疫",
         desc: "這是疫情期間用手機和 CapCut 剪輯的小短片，主角是我家裡的鯊鯊，記錄牠一天的「居家防疫生活」。雖然製作時間緊湊、會的工具也不多，但我用鯊魚玩偶構思劇情，拍出了一段輕鬆逗趣的小故事。",
         link: "https://reurl.cc/5KK4WR"
+    },
+    {
+        img: "assets/portfolio/lightslearn.webp",
+        title: "從零開始的 3D 練習 — Day 4",
+        desc: "持續跟著 CrossMind Studio 的系列課程學習，這是 Day 4 的成果。本次練習的重點是燈光的運用，透過不同光源與角度的配置，嘗試營造出物件的立體感與層次，讓畫面中的每個元素都能更清晰地呈現。雖然仍屬於基礎練習，但我對光影的掌握已有更進一步的理解。最有收穫的一點，是我開始明白為什麼物件的大小——特別是盡可能貼近實體尺寸——會對光影效果產生顯著影響。",
+        link: "https://reurl.cc/vQRonk"
+    },
+    {
+        img: "assets/portfolio/shaderslearn.webp",
+        title: "從零開始的 3D 練習 — Day 5",
+        desc: "持續跟著 CrossMind Studio 的系列課程學習，這是 Day 5 的成果。本次練習聚焦於燈光的渲染表現與 Texture 的初步認識，嘗試透過不同材質與光源的搭配，讓畫面呈現出更真實且富有層次的質感。透過實作，更進一步理解了材質貼圖如何影響物件的視覺效果。",
+        link: "https://drive.google.com/drive/folders/1kkYz3-dcHnQ5MEfkCNlZm3et6oCAgKjj?usp=share_link"
     }
 ];
 let slideIndex = 1;
@@ -160,7 +172,7 @@ function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
         slideIndex++;
         showSlide(slideIndex);
-    }, 7000); // Auto slide per 7 seconds
+    }, 10000); // Auto slide per 10 seconds
 }
 
 function stopAutoSlide() {
