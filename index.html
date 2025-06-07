@@ -104,29 +104,20 @@
         <section class="portfolio-section bg-light" id="portfolio">
             <div class="container featured-text text-center text-lg-left px-4 px-lg-5">
                 <h2 class="mb-3">從想法到實現的旅程</h2>
-                <p class="text-black-50 mb-0">每一個呈現背後，都有一個我想學會、想嘗試、想證明自己的理由。<br>從「做做看」開始，到「原來我真的能做到」。<br>這裡是我一步步實踐技術的記錄，無論是程式、設計、建模，還是資料視覺化。</p>
-                <!-- Demonstrations Wrapper Frame -->  
-                <div class="steps-wrapper row gx-0 mb-4 mb-lg-5 align-items-center position-relative">
-                    <!-- Left-->
-                    <div class="step-card step-left ">
-                        <img src="assets/portfolio/picheart.webp" class="step-icon mb-3" id="img-left"/>
-                        <div class="step-text">
-                            <h5 class="fw-bold" id="title-left">左</h5>
-                            <p class="text-muted" id="desc-left">左</p>
-                        </div>
-                    </div>
-                    <!-- Center circle arrow -->
-                    <div class="arrow-circle d-flex align-items-center justify-content-center" id="arrow-next" style="cursor:pointer;">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    <!-- Right-->
-                    <div class="step-card step-right" id="card-right">
-                        <img src="assets/portfolio/watermask.webp" class="step-icon mb-3" id="img-right"/>
-                        <div class="step-text">
-                            <h5 class="fw-bold" id="title-right">右</h5>
-                            <p class="text-muted" id="desc-right">右</p>
-                        </div>
-                    </div>
+                <p class="text-black-50 mb-0" style="padding-bottom: 50px;">每一個呈現背後，都有一個我想學會、想嘗試的理由。<br>從「做做看」開始，到「原來我真的能做到」。<br>這裡是我一步步實踐技術的記錄，無論是程式、設計、建模，還是資料視覺化。</p>
+                
+                <div class="carousel-container">
+                    <!-- JS control-->
+                     <div id="carousel-slides-container"></div>
+                    <!-- Navigator -->
+                    <button class="carousel-nav prev" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-nav next" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <!-- Circle -->
+                    <div class="carousel-dots" id="carousel-dots-container"></div>
                 </div>
             </div>
         </section>
@@ -493,8 +484,8 @@
         <!-- * * 🕸️Chart.js  ~* *-->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <!-- * * My Script ~* *-->
-        <!-- * * Step Technical Demonstrations btn Grid ~* *-->
-        <script src="js/tech-demo-grid.js"></script>
+        <!-- * * Step Technical Demonstrations btn Grid/ Update Carousel ~* *-->
+        <script src="js/tech-demo-grid0607.js"></script>
         <!-- * * Step Dashboard Grid ~* *-->
         <script src="js/dashboard-grid.js"></script>
         <!-- * * Waterfall Experience Grid ~* *-->
